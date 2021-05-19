@@ -7,18 +7,18 @@ steps:
   clone:
     title: "Cloning repository"
     type: "git-clone"
-    repo: "kostis-codefresh/github-pr-comment-step"
+    repo: "dashhudson/github-pr-comment-step"
     revision: "master"
-    git: "github-1"
+    git: "Dashbot"
     stage: "clone"
 
   upload:
     title: "Upload to marketplace"
     type: "freestyle" 
-    image: "codefresh/cli" 
+    image: "quay.io/codefresh/cli:latest" 
     working_directory: "${{clone}}" 
     commands:
-      - "codefresh replace step-types kostis-codefresh/github-pr-comment -f pr-comment-plugin.yml"
+      - "codefresh replace step-types dashhudson/github-pr-comment -f pr-comment-plugin.yml"
     stage: "update"
     when:
       branch:
