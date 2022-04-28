@@ -43,7 +43,7 @@ metadata:
               GIT_PROVIDER_NAME: 'github'
               CF_PULL_REQUEST_NUMBER: 45
   latest: true
-  version: 1.0.0
+  version: 1.0.1
 spec:
   arguments: |-
     {
