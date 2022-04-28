@@ -93,7 +93,7 @@ spec:
          - GITHUB_COMMENT_TYPE=pr
          - GITHUB_PR_ISSUE_NUMBER=${{CF_PULL_REQUEST_NUMBER}}
          - GITHUB_COMMENT=${{PR_COMMENT_TEXT}}
-#         - GITHUB_DELETE_COMMENT_REGEX=staging
+         - GITHUB_DELETE_COMMENT_REGEX="Your preview environment"
        commands:
          - github-commenter
 
